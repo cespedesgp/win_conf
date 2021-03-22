@@ -1,0 +1,39 @@
+Windows Registry Editor Version 5.00
+; Inclui no menu de contexto opção de abrir com gvim
+[HKEY_CLASSES_ROOT\*\shell\gvim]
+@="Editar com gvim"
+"Icon"="\"C:\\Program Files (x86)\\Vim\\vim82\\gvim.exe\""
+[HKEY_CLASSES_ROOT\*\shell\gvim\command]
+@="\"C:\\Program Files (x86)\\Vim\\vim82\\gvim.exe\" %1"
+[HKEY_CLASSES_ROOT\Directory\shell\gvim]
+@="Abrir gvim no diretório"
+"Icon"="\"C:\\Program Files (x86)\\Vim\\vim82\\gvim.exe\""
+[HKEY_CLASSES_ROOT\Directory\shell\gvim\command]
+@="\"C:\\Program Files (x86)\\Vim\\vim82\\gvim.exe\""
+[HKEY_CLASSES_ROOT\Directory\Background\shell\gvim]
+@="Abrir gvim aqui"
+"Icon"="\"C:\\Program Files (x86)\\Vim\\vim82\\gvim.exe\""
+[HKEY_CLASSES_ROOT\Directory\Background\shell\gvim\command]
+@="\"C:\\Program Files (x86)\\Vim\\vim82\\gvim.exe\""
+
+;[HKEY_CLASSES_ROOT\Directory\shell\CommandPrompt]
+;@="Abrir cmd no diretório"
+;[HKEY_CLASSES_ROOT\Directory\shell\CommandPrompt\Command]
+;@="cmd.exe /k cd %1"
+;[HKEY_CLASSES_ROOT\Directory\Background\shell\CommandPrompt]
+;@="Abrir cmd aqui"
+;"Icon"="\"%SystemRoot%\\System32\\cmd.exe\""
+;[HKEY_CLASSES_ROOT\Directory\Background\shell\CommandPrompt\Command]
+;@="cmd.exe /k cd %cd%"
+;
+; Adiciona a opção abrir com PowerShell
+[HKEY_CLASSES_ROOT\Directory\shell\PShell]
+@="Abrir PowerShell no diretório"
+"Icon"="\"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\""
+[HKEY_CLASSES_ROOT\Directory\shell\PShell\Command]
+@="powershell.exe powershell.exe -noexit -command Set-Location -literalPath '%V'"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\PShell]
+@="Abrir PowerShell aqui"
+"Icon"="\"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\""
+[HKEY_CLASSES_ROOT\Directory\Background\shell\PShell\Command]
+@="powershell.exe powershell.exe -noexit -command Set-Location -literalPath '%V'"
